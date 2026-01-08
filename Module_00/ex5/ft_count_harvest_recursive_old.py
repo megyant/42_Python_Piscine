@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 def ft_count_harvest_recursive():
     days = int(input("Days until harvest: "))
 
@@ -7,5 +9,4 @@ def ft_count_harvest_recursive():
             return
         print(f'Day {now}')
         helper(now + 1)
-
-    helper(1)
+    helper(1) 
