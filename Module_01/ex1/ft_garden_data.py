@@ -1,6 +1,5 @@
-#!/usr/bin/env python3
-
 class Plant:
+    """ Create a class for plant with name, heigth and age """
     def __init__(self, name, height, age):
         self.name = name
         self.height = height

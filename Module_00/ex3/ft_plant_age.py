@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 def ft_plant_age():
     age = int(input("Enter plant age in days: "))
     ready_age = 60

@@ -1,6 +1,5 @@
-#!/usr/bin/env python3
-
 def ft_garden_intro():
+    """  Display name, height and age for several plants """
     plantname = "Rose"
     heigth = 25
     age = 30

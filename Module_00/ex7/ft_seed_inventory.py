@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 def ft_seed_inventory(seed_type: str, quantity: int, unit: str) -> None:
     seed = seed_type.capitalize()
 
