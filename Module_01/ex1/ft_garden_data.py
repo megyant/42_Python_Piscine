@@ -1,5 +1,5 @@
 class Plant:
-    """ Create a class for plant with name, heigth and age """
+    """ Create a class for plant """
     def __init__(self, name, height, age):
         self.name = name
         self.height = height

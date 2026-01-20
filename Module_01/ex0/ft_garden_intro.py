@@ -1,5 +1,5 @@
 def ft_garden_intro():
-    """  Display name, height and age for several plants """
+    """  Display information of several plants """
     plantname = "Rose"
     heigth = 25
     age = 30
