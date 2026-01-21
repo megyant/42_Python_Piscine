@@ -9,7 +9,7 @@ class Plant:
         self.days = days
         Plant.count += 1
 
-    def get_info(self):
+    def get_info(self) -> None:
         """ Display plant information """
         print(f'Created: {self.name} ({self.height}cm, {self.days} days)')
 

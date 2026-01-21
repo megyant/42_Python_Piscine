@@ -6,15 +6,15 @@ class Plant:
         self.height = height
         self.days = days
 
-    def grow(self):
+    def grow(self) -> None:
         """ Increase plant height by 1 """
         self.height += 1
 
-    def age(self):
+    def age(self) -> None:
         """ Increase plant age by 1 """
         self.days += 1
 
-    def get_info(self):
+    def get_info(self) -> None:
         """ Print plant status information"""
         print(f'{self.name}: {self.height}cm, {self.days} days old')
 
