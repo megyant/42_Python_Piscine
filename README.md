@@ -4,7 +4,7 @@ This repository consists of a set of smaller projects to introduce programming t
 
 ## Module 00
 
-This module contains 7 exercises. Here we learn about how defining functions in python works, about how to work with strings and ints and how to use some functions in python such as print() ant input().
+This module contains 7 exercises. Here we learn about how defining functions in python works, about how to work with strings and integers and how to use some functions in python such as print() ant input().
 
 ## Module 01
 
