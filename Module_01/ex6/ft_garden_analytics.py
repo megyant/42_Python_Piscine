@@ -70,7 +70,7 @@ class Garden:
         return len(self.plants), self.total_growth
 
     def report(self):
-        print(f"=== {self.owner}'s Garden Report ===")
+        print(f"=== {self.owner}'s Garden Report ===\n")
         print("Plants in garden:")
         for plant in self.plants:
             print(f"- {plant.details()}")
@@ -116,13 +116,12 @@ class GardenManager:
 
     @classmethod
     def create_system(cls):
-        print("=== Garden Manager System Demo ===")
+        print("=== Garden Manager System Demo ===\n")
         return cls()
 
 
 if __name__ == "__main__":
     manager = GardenManager.create_system()
-    print()
 
     alice_garden = Garden("Alice")
     manager.add_garden(alice_garden)
@@ -140,14 +139,12 @@ if __name__ == "__main__":
     print()
     alice_garden.report()
 
-    print()
     plants_count, growth = alice_garden.get_stats()
     a_score, regular, flowering, prize = manager.stats.calculate_score(
         alice_garden.plants)
     print(f"Plants added: {plants_count}, Total growth: {growth}cm")
     print(f"Plant types: {regular} regular, {flowering} flowering, "
-          f"{prize} prize flowers")
-    print()
+          f"{prize} prize flowers\n")
 
     is_valid = GardenManager.height_validation(p1.get_height())
     print(f"Height validation test: {is_valid}")
