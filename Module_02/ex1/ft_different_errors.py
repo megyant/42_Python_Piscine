@@ -1,16 +1,18 @@
 def garden_operations(error_type) -> None:
     if error_type == "value":
         int("abc")
-    
+
     elif error_type == "zero":
         1/0
-    
+
     elif error_type == "file":
         f = open("missing.txt")
-    
+        print(f.read())
+        f.close
+
     elif error_type == "key":
-        garden = {"Tree":"Oak", "Flower":"Rose"}
-        print(garden["missing plant"])   
+        garden = {"Tree": "Oak", "Flower": "Rose"}
+        print(garden["missing plant"])
 
 
 def test_error_types():
@@ -33,13 +35,13 @@ def test_error_types():
         garden_operations("file")
     except FileNotFoundError as e:
         print(f"Caught FileNotFoundError: No such file '{e.filename}'")
-    
+
     print("\nTesting KeyError...")
     try:
         garden_operations("key")
     except KeyError as e:
         print(f"Caught KeyError: {e}")
-    
+
     print("\nTesting multiple errors together...")
     try:
         garden_operations("value")
@@ -48,9 +50,8 @@ def test_error_types():
         garden_operations("key")
     except (ValueError, FileNotFoundError, ZeroDivisionError, KeyError):
         print("Caught an error, but program continues!")
-    
+
     print("\nAll error types tested sucessfully!")
-    
 
 
 if __name__ == "__main__":
