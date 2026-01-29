@@ -1,17 +1,16 @@
 class WaterError(Exception):
-    def __init__(self, message):
-        super().__init__(message)
+    pass
 
 
 def water_plants(plant_list):
     try:
         print("Opening watering system")
         for plant in plant_list:
-            if plant != "None":
-                print(f"Watering {plant}")
-            else:
-                raise WaterError(f"Error: cannot water {plant}"
+            if not plant:
+                raise WaterError(f"Error: cannot water {plant} "
                                  "- invalid plant!")
+            else:
+                print(f"Watering {plant}")
     except WaterError as e:
         print(e)
     finally:
@@ -22,13 +21,13 @@ def test_watering_system():
     print("=== Garden Watering System ===")
 
     print("\nTesting normal watering...")
-    plant_list = ["tomato", "lettuce", "carrots"]
-    water_plants(plant_list)
+    plant_list_good = ["tomato", "lettuce", "carrots"]
+    water_plants(plant_list_good)
     print("Watering completed sucessfully!")
 
     print("\nTesting with error...")
-    plant_list = ["tomato", "None"]
-    water_plants(plant_list)
+    plant_list_bad = ["tomato", None]
+    water_plants(plant_list_bad)
 
     print("\nCleanup always happens, even with errors!")
 
