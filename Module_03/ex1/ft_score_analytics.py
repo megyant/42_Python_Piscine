@@ -1,8 +1,28 @@
-# Check if there are arguments
-# Check if arguments are numbers - else raise exception
-# Print argumets after being processed in a list
-# Count the number of arguments
-# Do the average (sum(args)/len(args))
-# find high score
-# find low score
-# do max - min
+def score_analysis():
+    import sys
+    try:
+        if (len(sys.argv) < 2):
+            raise ValueError(f"No scores provided. Usage: python3 {sys.argv[0]} <score1> <score2> ...")
+    except ValueError as e:
+        print(e)
+        return
+
+    try:
+        scores = [int(arg) for arg in sys.argv[1:]]
+        print(f"Scores processed: {scores}")
+    except ValueError:
+        print("All arguments must be integers. Usage: python3 {sys.argv[0]} "
+              "<score1> <score2> ...")
+        return
+
+    print(f"Total players: {len(sys.argv[1:])}")
+    print(f"Total score: {sum(scores)}")
+    print(f"Average score: {sum(scores)/len(sys.argv[1:])}")
+    print(f"High Score: {max(scores)}")
+    print(f"Low Score: {min(scores)}")
+    print(f"Score range: {max(scores) - min(scores)}")
+
+
+if __name__ == "__main__":
+    print("=== Player Score Analytics ===")
+    score_analysis()
