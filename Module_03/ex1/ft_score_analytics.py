@@ -2,7 +2,9 @@ def score_analysis():
     import sys
     try:
         if (len(sys.argv) < 2):
-            raise ValueError(f"No scores provided. Usage: python3 {sys.argv[0]} <score1> <score2> ...")
+            raise ValueError("No scores provided."
+                             f" Usage: python3 {sys.argv[0]} "
+                             "<score1> <score2> ...")
     except ValueError as e:
         print(e)
         return
