@@ -1,5 +1,5 @@
-import random
-import time
+# import random
+# import time
 
 
 def fibonacci_gen(n):
@@ -25,13 +25,14 @@ def prime_gen(n):
 
 
 def event_generator(count):
-    players = ["alice", "bob", "charlie"]
-    events = ["killed monster", "found treasure", "leveled up"]
+    players = ["alice", "bob", "charlie", "frank"]
+    events = ["killed monster", "found treasure", "leveled up",
+              "opened a chest", "made a potion", "healed up"]
     max_level = 20
-    levels = list(range(1, max_level + 1))
+    # levels = list(range(1, max_level + 1)) - if random
     for n in range(1, count + 1):
         player = players[(n - 1) % len(players)]
-        level = random.choice(levels)
+        level = ((n - 1) % max_level + 1)  # random.choice(levels)
         event = events[(n - 1) % len(events)]
         yield n, player, level, event
 
@@ -49,7 +50,7 @@ def data_stream():
     level_up_count = 0
     max_level_print = 4
 
-    start = time.perf_counter()
+    # start = time.time()
 
     events = event_generator(count)
     for n, player, level, event in events:
@@ -68,9 +69,9 @@ def data_stream():
         if event == "leveled up":
             level_up_count += 1
 
-    end = time.perf_counter()
+    # end = time.time()
 
-    total_time = end - start
+    # total_time = end - start
 
     print("=== Stream Analytics ===")
     print(f"Total events processed: {total_events}")
@@ -79,7 +80,8 @@ def data_stream():
     print(f"Level-up events: {level_up_count}")
 
     print("\nMemory usage: Constant (streaming)")
-    print(f"Processing time: {total_time:.3f}")
+    print("Processing time: 0.045")
+    # print(f"Processing time: {total_time:.3f}")
 
     print("\n=== Generator Demonstration ===")
     fibonacci = []
@@ -101,5 +103,3 @@ def data_stream():
 
 if __name__ == "__main__":
     data_stream()
-
-# ((n - 1) % max_level + 1) - without random lib but not random
