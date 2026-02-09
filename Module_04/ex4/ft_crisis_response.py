@@ -14,16 +14,22 @@ def crisis_response():
     except FileNotFoundError:
         print("RESPONSE: Archive not found in storage matrix")
         print("STATUS: Crisis handled, system stable\n")
+    except PermissionError:
+        print("RESPONSE: Security protocols deny access")
+        print("STATUS: Crisis handled, security maintained\n")
 
     print(f"CRISIS ALERT: Attempting acess to '{classified}'...")
 
     try:
         with open(classified, "r") as f_classified:
             print(f"Archive recovered - '{f_classified.read()}'...")
-        print("STATUS: Normal operations resumed\n")
+        print("STATUS: Normal operations resumed\n")   
     except (FileNotFoundError, PermissionError):
         print("RESPONSE: Security protocols deny access")
         print("STATUS: Crisis handled, security maintained\n")
+    except FileNotFoundError:
+        print("RESPONSE: Archive not found in storage matrix")
+        print("STATUS: Crisis handled, system stable\n")
 
     print(f"CRISIS ALERT: Attempting acess to '{standard}'...")
     try:
@@ -33,6 +39,9 @@ def crisis_response():
     except FileNotFoundError:
         print("RESPONSE: Archive not found in storage matrix")
         print("STATUS: Crisis handled, system stable\n")
+    except PermissionError:
+        print("RESPONSE: Security protocols deny access")
+        print("STATUS: Crisis handled, security maintained\n")
 
     print("All crisis scenarios handled successfully. Archives secure.")
 
