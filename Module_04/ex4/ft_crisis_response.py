@@ -23,7 +23,7 @@ def crisis_response():
     try:
         with open(classified, "r") as f_classified:
             print(f"Archive recovered - '{f_classified.read()}'...")
-        print("STATUS: Normal operations resumed\n")   
+        print("STATUS: Normal operations resumed\n")
     except (FileNotFoundError, PermissionError):
         print("RESPONSE: Security protocols deny access")
         print("STATUS: Crisis handled, security maintained\n")
