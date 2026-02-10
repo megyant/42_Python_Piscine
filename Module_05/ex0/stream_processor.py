@@ -1,9 +1,9 @@
 from abc import ABC, abstractmethod
 from typing import Any
 
+
 class DataProcessor(ABC):
     @abstractmethod
-
     def process(self, data: Any) -> str:
         pass
 
@@ -16,7 +16,16 @@ class DataProcessor(ABC):
 
 class NumericProcessor(DataProcessor):
 
-class TextProcessor(DataProcessor):
+#class TextProcessor(DataProcessor):
 
-class LogProcessor(DataProcessor):
-    a
+#class LogProcessor(DataProcessor):
+    #a
+
+
+def data_processor():
+    print("=== CODE NEXUS - DATA PROCESSOR FOUNDATION ===\n")
+
+    print("Initializing Numeric Processor...")
+
+if __name__ == "__main__":
+    data_processor()
