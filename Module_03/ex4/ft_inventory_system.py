@@ -1,27 +1,31 @@
 import sys
 
+
 def inventory_analysis():
     try:
         if len(sys.argv) < 2:
             raise ValueError("Missing arguments. "
-            f"Usage: python3 {sys.argv[0]} item:count item:count ...")
+                             f"Usage: python3 {sys.argv[0]} "
+                             "item:count item:count ...")
         else:
             args = sys.argv[1:]
             inventory = dict()
 
-            for arg in sys.argv[1:]:
+            for arg in args:
                 if ":" in arg:
                     item, count = arg.split(':')
                     if not int(count) or int(count) <= 0:
                         raise ValueError(f"Count must be a positive integer. "
-                        f"Usage: python3 {sys.argv[0]} item:count item:count...")
+                                         f"Usage: python3 {sys.argv[0]} "
+                                         "item:count item:count...")
                     else:
                         inventory.update({item: int(count)})
-                        
+
                 else:
                     raise ValueError(f"Wrong input format. "
-                    f"Usage: python3 {sys.argv[0]} item:count item:count...")
-            
+                                     f"Usage: python3 {sys.argv[0]} "
+                                     "item:count item:count...")
+
             total = sum(inventory.values())
             print("=== Inventory System Analysis ===")
             print(f"Total items in inventory: {total}")
@@ -37,17 +41,18 @@ def inventory_analysis():
                     if count == max_val:
                         percentage = (count / total) * 100
                         unit_label = "unit" if count == 1 else "units"
-                        print(f"{item}: {count} {unit_label} ({percentage:.1f}%)")
+                        print(f"{item}: {count} {unit_label} "
+                              f"({percentage:.1f}%)")
                 max_val -= 1
-            
+
             print("\n=== Inventory statistics ===")
 
             max_val = max(inventory.values())
 
-            most_key = max(inventory, key = inventory.get)
+            most_key = max(inventory, key=inventory.get)
             print(f"Most abundant: {most_key} ({max_val})")
 
-            least_key = min(inventory, key = inventory.get)
+            least_key = min(inventory, key=inventory.get)
             print(f"Least abundant: {least_key} ({min_val})")
 
             print("\n=== Item Categories ===")
@@ -61,7 +66,7 @@ def inventory_analysis():
                     scarce[item] = count
             print(f"Moderate: {moderate}")
             print(f"Scarce: {scarce}")
-        
+
             print("\n=== Management Suggestions ===")
             restock = []
             for item, count in inventory.items():
@@ -88,8 +93,6 @@ def inventory_analysis():
 
     except ValueError as e:
         print(e)
-    
-
 
 
 if __name__ == "__main__":
