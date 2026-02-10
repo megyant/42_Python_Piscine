@@ -32,6 +32,7 @@ def crisis_response():
         print("STATUS: Crisis handled, system stable\n")
 
     print(f"CRISIS ALERT: Attempting acess to '{standard}'...")
+
     try:
         with open(standard, "r") as f_standard:
             print(f"Archive recovered - '{f_standard.read()}'")
