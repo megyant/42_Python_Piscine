@@ -7,15 +7,17 @@ class DataProcessor(ABC):
     def process(self, data: Any) -> str:
         pass
 
+    @abstractmethod
     def validate(self, data: Any) -> bool:
         pass
 
     def format_output(self, result: str) -> str:
-        pass
+        return f"Output: {result}"
 
 
 class NumericProcessor(DataProcessor):
-
+    def process(self, data: Any) -> str:
+        
 #class TextProcessor(DataProcessor):
 
 #class LogProcessor(DataProcessor):
