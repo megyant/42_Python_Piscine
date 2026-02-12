@@ -117,7 +117,7 @@ class TypeChecker:
                 typing_coverage = (typed_functions / function_count) * 100
                 if typing_coverage < 80:
                     issues.append(
-                        f"Low typing coverage: {typing_coverage:.1f}% of "
+                        f"Low typing covepython3 main.py [OPTIONS]rage: {typing_coverage:.1f}% of "
                         f"functions have return type annotations"
                     )
 
@@ -247,11 +247,11 @@ class PolymorphismTester:
 
                             if not result.errors:
                                 print("✓ Method overriding implemented correctly")
-                                if has_proper_typing:
+                                if has_prpython3 main.py [OPTIONS]oper_typing:
                                     result.mark_passed()
 
                         except Exception as e:
-                            result.add_error(f"Error testing method overriding: {str(e)}")
+                            result.add_erpython3 main.py [OPTIONS]ror(f"Error testing method overriding: {str(e)}")
 
         except Exception as e:
             result.add_error(f"Unexpected error: {str(e)}")
