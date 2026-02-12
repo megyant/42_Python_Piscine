@@ -1,9 +1,10 @@
 class Plant:
     """ Defining a plant """
+
     count = 0
 
-    def __init__(self, name, height, days) -> None:
-        """ Initialize plant variables """
+    def __init__(self, name: str, height: int, days: int) -> None:
+        """ Initialize plant attributes """
         self.name = name
         self.height = height
         self.days = days
@@ -21,6 +22,7 @@ if __name__ == "__main__":
               ("Sunflower", 80, 45),
               ("Fern", 15, 120)
               ]
+
     for name, height, age in plants:
         print_plant = Plant(name, height, age)
         print_plant.get_info()

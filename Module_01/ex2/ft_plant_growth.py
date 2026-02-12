@@ -1,17 +1,17 @@
 class Plant:
-    """ Plant that grows overtime """
-    def __init__(self, name, height, days) -> None:
-        """ Initialize plant variables """
+    """ Plant that grows and ages over time """
+    def __init__(self, name: str, height: int, days: str) -> None:
+        """ Initialize plant attributes """
         self.name = name
         self.height = height
         self.days = days
 
     def grow(self) -> None:
-        """ Increase plant height by 1 """
+        """ Increase plant height by one """
         self.height += 1
 
     def age(self) -> None:
-        """ Increase plant age by 1 """
+        """ Increase plant age by one """
         self.days += 1
 
     def get_info(self) -> None:

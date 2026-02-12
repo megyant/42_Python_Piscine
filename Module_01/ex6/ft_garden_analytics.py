@@ -1,75 +1,97 @@
 class Plant:
-    def __init__(self, name, initial_height):
+    """ A Plant that grows"""
+    def __init__(self, name: str, initial_height: int) -> None:
+        """ Initializing plant attributes"""
         self.name = name
         self.set_height(initial_height)
 
-    def set_height(self, new_height) -> int:
+    def set_height(self, new_height: int) -> None:
+        """ Updating plant height """
         if (new_height < 0):
             self.height = 0
         else:
             self.height = new_height
 
-    def get_height(self):
+    def get_height(self) -> int:
+        """ getting current height"""
         return self.height
 
-    def details(self):
+    def details(self) -> str:
+        """getting current plant and its height"""
         return f"{self.name}: {self.height}cm"
 
-    def grow(self):
+    def grow(self) -> None:
+        """ Increasing height by one """
         self.height += 1
         print(f"{self.name} grew 1cm")
 
-    def get_category(self):
+    def get_category(self) -> str:
+        """ Define plant as being regular """
         return "regular"
 
 
 class FloweringPlant(Plant):
-    def __init__(self, name, initial_height, color):
+    """ A plant that blooms """
+    def __init__(self, name: str, initial_height: int, color: str) -> None:
+        """Initializing flowering plant attributes"""
         super().__init__(name, initial_height)
         self.color = color
 
-    def details(self):
+    def details(self) -> str:
+        """ Returning flowering plant details """
         base_details = super().details()
         return f"{base_details}, {self.color} flowers (blooming)"
 
-    def get_category(self):
+    def get_category(self) -> str:
+        """ Defining plant as flowering """
         return "flowering"
 
 
 class PrizeFlower(FloweringPlant):
-    def __init__(self, name, height, color, points):
+    """ A plant that has earned points in a competition"""
+    def __init__(self, name: str, height: int, color: str,
+                 points: int) -> None:
+        """Initializing prize flower attributes"""
         super().__init__(name, height, color)
         self.points = points
 
-    def details(self):
+    def details(self) -> str:
+        """ Returning prize flower details"""
         base_details = super().details()
         return (f"{base_details}, Prize points: {self.points}")
 
-    def get_category(self):
+    def get_category(self) -> str:
+        """ Defining plant as being prize """
         return "prize"
 
 
 class Garden:
-    def __init__(self, owner: str):
+    """ A garden with different plants that grow and an owner"""
+    def __init__(self, owner: str) -> None:
+        """ Initializing garden attributes """
         self.owner = owner.title()
         self.plants = []
         self.total_growth = 0
 
-    def add_plant(self, plant):
+    def add_plant(self, plant: Plant) -> None:
+        """ Adding plant to the garden """
         self.plants.append(plant)
         plant.name = plant.name.title()
         print(f"Added {plant.name} to {self.owner}'s garden")
 
-    def help_grow(self):
+    def help_grow(self) -> None:
+        """ Increase plant height by one """
         print(f"{self.owner} is helping all plants grow...")
         for plant in self.plants:
             plant.grow()
             self.total_growth += 1
 
-    def get_stats(self):
+    def get_stats(self) -> tuple[int, int]:
+        """ Returning plant attributes """
         return len(self.plants), self.total_growth
 
-    def report(self):
+    def report(self) -> None:
+        """ Listing plants in garden """
         print(f"=== {self.owner}'s Garden Report ===\n")
         print("Plants in garden:")
         for plant in self.plants:
@@ -77,14 +99,13 @@ class Garden:
 
 
 class GardenManager:
+    """ All gardens that are being managed """
     total_gardens = 0
 
-    def add_garden(self, garden):
-        self.gardens.append(garden)
-        GardenManager.total_gardens += 1
-
     class GardenStats:
-        def calculate_score(self, plants):
+        """ Calculating different garden stats """
+        def calculate_score(self, plants: list[Plant]) -> tuple[int, ...]:
+            """ Calculating garden Score """
             total_score = 0
             total_regular = 0
             total_flowering = 0
@@ -104,18 +125,26 @@ class GardenManager:
 
             return total_score, total_regular, total_flowering, total_prize
 
-    def __init__(self):
+    def __init__(self) -> None:
+        """ Initializing garden manager attributes"""
         self.gardens = []
         self.stats = self.GardenStats()
 
+    def add_garden(self, garden: Garden) -> None:
+        """ Add new garden to be managed """
+        self.gardens.append(garden)
+        GardenManager.total_gardens += 1
+
     @staticmethod
-    def height_validation(value):
+    def height_validation(value: int) -> bool:
+        """ Checking if height is greater than 0"""
         if value >= 0:
             return True
         return False
 
     @classmethod
     def create_system(cls):
+        """ Creating the garden manager system"""
         print("=== Garden Manager System Demo ===\n")
         return cls()
 
