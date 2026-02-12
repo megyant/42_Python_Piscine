@@ -171,7 +171,7 @@ if __name__ == "__main__":
     plants_count, growth = alice_garden.get_stats()
     a_score, regular, flowering, prize = manager.stats.calculate_score(
         alice_garden.plants)
-    print(f"Plants added: {plants_count}, Total growth: {growth}cm")
+    print(f"\nPlants added: {plants_count}, Total growth: {growth}cm")
     print(f"Plant types: {regular} regular, {flowering} flowering, "
           f"{prize} prize flowers\n")
 

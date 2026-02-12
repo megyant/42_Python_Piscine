@@ -27,4 +27,4 @@ if __name__ == "__main__":
         print_plant = Plant(name, height, age)
         print_plant.get_info()
 
-    print(f'Total plants created: {Plant.count}')
+    print(f'\nTotal plants created: {Plant.count}')
