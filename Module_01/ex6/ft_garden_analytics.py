@@ -143,7 +143,7 @@ class GardenManager:
         return False
 
     @classmethod
-    def create_system(cls):
+    def create_system(cls) -> "GardenManager":
         """ Creating the garden manager system"""
         print("=== Garden Manager System Demo ===\n")
         return cls()

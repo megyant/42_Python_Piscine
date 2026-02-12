@@ -9,7 +9,8 @@ class Plant:
 
 class Flower(Plant):
     """ A flower(plant) that has different colours and blooms """
-    def __init__(self, name: str, height: int, age: int, color: str):
+    def __init__(self, name: str, height: int, age: int,
+                 color: str) -> None:
         """ Initializing flower atributes """
         super().__init__(name, height, age)
         self.color = color

@@ -1,6 +1,6 @@
 class Plant:
     """ Create a class for plant """
-    def __init__(self, name: str, height: int, age: int):
+    def __init__(self, name: str, height: int, age: int) -> None:
         """ Initialize a new Plant instance """
         self.name = name
         self.height = height
