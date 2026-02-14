@@ -40,7 +40,7 @@ class NumericProcessor(DataProcessor):
             return self.format_output(f"Processed {len_list} numeric values, "
                                       f"sum={sum_list}, "
                                       f"avg={avg_list:.1f}")
-    
+
     def format_output(self, result):
         return super().format_output(result)
 
@@ -152,6 +152,7 @@ def data_processor():
             print(f"Result {result_num}: {output}")
     except ValueError:
         print("ERROR: Invalid input")
+
 
 if __name__ == "__main__":
     data_processor()
