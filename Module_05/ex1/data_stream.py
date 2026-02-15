@@ -16,3 +16,14 @@ class DataStream(ABC):
 
     def get_stats(self) -> dict[str, Union[str, int, float]]:
         return {"stream_id": self.stream_id}
+
+class SensorStream(DataStream):
+    def __init__(self, stream_id: str):
+        super().__init__(stream_id)
+    
+    def process_batch(self, data_batch):
+        return super().process_batch(data_batch)
+
+class TransactionStream(DataStream):
+
+class EventStream(DataStream):
