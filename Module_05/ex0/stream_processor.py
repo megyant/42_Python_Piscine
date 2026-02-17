@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from typing import Any
+from typing import Any, List
 
 
 class DataProcessor(ABC):
@@ -18,7 +18,7 @@ class DataProcessor(ABC):
 class NumericProcessor(DataProcessor):
 
     def validate(self, data: Any) -> bool:
-        if isinstance(data, list):
+        if isinstance(data, List):
             for number in data:
                 if not isinstance(number, int):
                     return False
@@ -41,7 +41,7 @@ class NumericProcessor(DataProcessor):
                                       f"sum={sum_list}, "
                                       f"avg={avg_list:.1f}")
 
-    def format_output(self, result):
+    def format_output(self, result) -> str:
         return super().format_output(result)
 
 
@@ -49,7 +49,7 @@ class TextProcessor(DataProcessor):
     def validate(self, data: Any) -> bool:
         return isinstance(data, str)
 
-    def process(self, data: Any) -> bool:
+    def process(self, data: Any) -> str:
         if not self.validate(data):
             return "ERROR: Invalid text data"
         len_chars = len(data)
@@ -80,11 +80,11 @@ class LogProcessor(DataProcessor):
             return self.format_output("[ALERT] INFO level dected: "
                                       "System ready")
 
-    def format_output(self, result):
+    def format_output(self, result) -> str:
         return super().format_output(result)
 
 
-def data_processor():
+def data_processor() -> None:
     print("=== CODE NEXUS - DATA PROCESSOR FOUNDATION ===\n")
 
     print("Initializing Numeric Processor...")
