@@ -1,19 +1,19 @@
 class GardenError(Exception):
-    def __init__(self, message):
+    def __init__(self, message: str) -> None:
         super().__init__(message)
 
 
 class PlantError(GardenError):
-    def __init__(self, message):
+    def __init__(self, message: str) -> None:
         super().__init__(message)
 
 
 class WaterError(GardenError):
-    def __init__(self, message):
+    def __init__(self, message: str) -> None:
         super().__init__(message)
 
 
-def test_custom_errors():
+def test_custom_errors() -> None:
     print("=== Custom Garden Errors Demo ===")
 
     print("\nTesting PlantError...")

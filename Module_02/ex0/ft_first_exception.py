@@ -1,4 +1,4 @@
-def check_temperature(temp_str):
+def check_temperature(temp_str: str) -> None:
     print(f"Testing temperature: {temp_str}")
 
     try:

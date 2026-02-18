@@ -11,10 +11,10 @@ class WaterError(GardenError):
 
 
 class GardenManager:
-    def __init__(self):
+    def __init__(self) -> None:
         self.plant_list = {}
 
-    def add_plants(self, plant, water, sun):
+    def add_plants(self, plant: str, water: int, sun: int) -> None:
         try:
             if not plant:
                 raise PlantError("Error adding plant: Plant name "
@@ -25,7 +25,7 @@ class GardenManager:
         except PlantError as e:
             print(e)
 
-    def water_plants(self):
+    def water_plants(self) -> None:
         try:
             print("\nOpening watering system...")
             if not self.plant_list:
@@ -38,7 +38,7 @@ class GardenManager:
         finally:
             print("Closing watering system (cleanup)")
 
-    def check_plant_health(self):
+    def check_plant_health(self) -> None:
         try:
             print("\nChecking plant heath...")
             if not self.plant_list:
@@ -69,7 +69,7 @@ class GardenManager:
             print(e)
 
 
-def test_garden_management():
+def test_garden_management() -> None:
     print("=== Garden Management System ===")
 
     plant_list = GardenManager()

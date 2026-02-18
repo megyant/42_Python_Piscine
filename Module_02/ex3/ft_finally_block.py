@@ -2,7 +2,7 @@ class WaterError(Exception):
     pass
 
 
-def water_plants(plant_list):
+def water_plants(plant_list: list[str]) -> None:
     try:
         print("Opening watering system")
         for plant in plant_list:

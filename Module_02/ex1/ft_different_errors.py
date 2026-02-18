@@ -1,4 +1,4 @@
-def garden_operations(error_type) -> None:
+def garden_operations(error_type: str) -> None:
     if error_type == "value":
         int("abc")
 
@@ -15,7 +15,7 @@ def garden_operations(error_type) -> None:
         print(garden["missing plant"])
 
 
-def test_error_types():
+def test_error_types() -> None:
     print(" === Garden Error Types Demo ===\n")
 
     print("Testing ValueError...")
