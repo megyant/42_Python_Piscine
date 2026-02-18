@@ -1,6 +1,6 @@
 # Python Piscine
 
-This repository consists of a series of intensive projects designed to introduce *Python programming* and *Object-Oriented Programming (OOP)*. The curriculum is organized into 10 modules (00 to 10), featuring exercises that progress from foundational logic to advanced implementation.
+This repository consists of a series of intensive projects designed to introduce *Python programming* and *Object-Oriented Programming (OOP)*. The curriculum is organized into 11 modules (00 to 10), featuring exercises that progress from foundational logic to advanced implementation.
 
 ## Module 00: Fundamentals
 7 Exercises - Focuses on the core syntax and essential building blocks of the language:  
