@@ -49,6 +49,7 @@ WIP - (help)
 ```
 
 ├── Module_00/
+│   ├── main.py
 │   ├── ex0/ ft_hello_garden.py
 │   ├── ex1/ ft_plot_area.py
 │   ├── ex2/ ft_harvest_total.py
@@ -57,6 +58,7 @@ WIP - (help)
 │   ├── ex5/ ft_count_harvest_iterative.py, ft_count_harvest_recursive.py
 │   ├── ex6/ ft_garden_summary.py
 │   └── ex7/ ft_seed_inventory.py
+
 ├── Module_01/
 │   ├── ex0/ ft_garden_intro.py
 │   ├── ex1/ ft_garden_data.py
@@ -89,5 +91,6 @@ WIP - (help)
 │   ├── ex3/ ft_vault_security.py
 │   └── ex4/ ft_crisis_response.py
 └── Module_05/
+│   ├── main.py
     ├── ex0/ stream_processor.py
     └── ex1/ data_stream.py
