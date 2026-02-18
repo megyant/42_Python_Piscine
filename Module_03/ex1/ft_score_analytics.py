@@ -1,4 +1,4 @@
-def score_analysis():
+def score_analysis() -> None:
     import sys
     try:
         if (len(sys.argv) < 2):

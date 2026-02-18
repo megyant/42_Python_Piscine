@@ -1,4 +1,4 @@
-def command_interpreter():
+def command_interpreter() -> None:
     import sys
     number = 1
     try:

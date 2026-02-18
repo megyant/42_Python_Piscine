@@ -2,7 +2,7 @@ import sys
 import math
 
 
-def parse_coordinates(coords_str):
+def parse_coordinates(coords_str: str) -> tuple[int, int, int]:
     try:
         values = coords_str.split(',')
         pos = tuple([int(v) for v in values])
@@ -15,7 +15,7 @@ def parse_coordinates(coords_str):
         return None
 
 
-def calculate_distance(p1, p2):
+def calculate_distance(p1, p2) -> float:
     x1, y1, z1 = p1
     x2, y2, z2 = p2
 
@@ -28,7 +28,7 @@ def calculate_distance(p1, p2):
     return distance
 
 
-def coordinate_system():
+def coordinate_system() -> None:
     print("=== Game Coordinate System ===")
     origin = (0, 0, 0)
 
