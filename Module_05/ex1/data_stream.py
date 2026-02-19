@@ -190,9 +190,19 @@ class StreamProcessor():
             stream.process_batch(data)
 
             stats = stream.get_stats()
-            category = stats['type'].split(' ')[0]
+            type = stats['type'].split(' ')[0]
 
-            print(f"- {category} data: {len(data)} items processed")
+            if type == "Environmental":
+                category = "Sensor"
+                print(f"- {category} data: {len(data)} readings processed")
+            elif type == "Financial":
+                category = "Transaction"
+                print(f"- {category} data: {len(data)} operations processed")
+            elif type == "System":
+                category = "Event"
+                print(f"- {category} data: {len(data)} events processed")
+            else:
+                print('ERROR: Invalid input data')
 
 
 def data_stream() -> None:
