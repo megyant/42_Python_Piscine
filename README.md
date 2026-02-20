@@ -40,8 +40,14 @@ This repository consists of a series of intensive projects designed to introduce
 * *File Operations:* Practical experience opening, reading, writing, and closing files.  
 * *Standard Streams:* Utilizing `stdin`, `stdout`, and `stderr` via the `sys` library for advanced input/output control.  
 
-## Module 05
-WIP - (help)
+## Module 05 - Data Streams
+3 Exercises - Covers method overriding and subtype polymorphism
+
+## Module 06 - Import system
+1 Exercise with 4 parts - Focuses on how to use python's import system.
+* *__init__.py:* Practical use of importing python packages
+* *Different import methods*: Covers different methods for importing packages, functions and files
+* *Circular dependency Curse*: Understanding and avoiding circular imports
 
 
 ## Repository Structure
