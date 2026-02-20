@@ -23,5 +23,6 @@ def circular_curse() -> None:
     print("\nCircular dependency curse avoided using late imports!")
     print("All spells processed safely!")
 
+
 if __name__ == "__main__":
     circular_curse()
