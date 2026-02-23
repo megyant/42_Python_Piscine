@@ -1,4 +1,4 @@
-def achievement_tracker():
+def achievement_tracker() -> None:
     print("=== Achievement Tracker System ===\n")
 
     players = {

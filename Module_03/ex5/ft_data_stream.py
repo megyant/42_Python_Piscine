@@ -1,15 +1,16 @@
+from typing import Iterator
 # import random
 # import time
 
 
-def fibonacci_gen(n):
+def fibonacci_gen(n: int) -> Iterator[int]:
     a, b = 0, 1
     for _ in range(n):
         yield a
         a, b = b, a + b
 
 
-def prime_gen(n):
+def prime_gen(n: int) -> Iterator[int]:
     count = 0
     number = 2
     while count < n:
@@ -24,7 +25,7 @@ def prime_gen(n):
         number += 1
 
 
-def event_generator(count):
+def event_generator(count: int) -> Iterator[tuple[int, str, int, str]]:
     players = ["alice", "bob", "charlie", "frank"]
     events = ["killed monster", "found treasure", "leveled up",
               "opened a chest", "made a potion", "healed up"]
@@ -37,7 +38,7 @@ def event_generator(count):
         yield n, player, level, event
 
 
-def data_stream():
+def data_stream() -> None:
 
     count = 1000
     print("=== Game Data stream Processor ==\n")

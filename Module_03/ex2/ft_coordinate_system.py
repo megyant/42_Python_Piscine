@@ -15,7 +15,8 @@ def parse_coordinates(coords_str: str) -> tuple[int, int, int]:
         return None
 
 
-def calculate_distance(p1, p2) -> float:
+def calculate_distance(p1: tuple[int, int, int],
+                       p2: tuple[int, int, int]) -> int:
     x1, y1, z1 = p1
     x2, y2, z2 = p2
 

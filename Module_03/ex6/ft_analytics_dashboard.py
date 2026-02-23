@@ -1,5 +1,5 @@
 
-def analytics_dashboard():
+def analytics_dashboard() -> None:
     print("=== Game Analytics Dashboard ===\n")
 
     data = [

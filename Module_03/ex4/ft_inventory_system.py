@@ -1,7 +1,7 @@
 import sys
 
 
-def inventory_analysis():
+def inventory_analysis() -> None:
     try:
         if len(sys.argv) < 2:
             raise ValueError("Missing arguments. "
