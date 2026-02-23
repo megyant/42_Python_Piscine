@@ -13,6 +13,7 @@ class CreatureCard(Card):
                 "type": self.type, "attack": self.attack, "health": self.health}
         return info
 
-    # def play(self, game_state: dict) -> dict:
+    def play(self, game_state: dict) -> dict:
+        pass
 
     # def attack_target(self, target: str) -> dict:

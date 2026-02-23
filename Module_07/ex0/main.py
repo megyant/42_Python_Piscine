@@ -12,3 +12,7 @@ def main():
     print("\nCreatureCard Info:")
     info = fire_dragon.get_card_info()
     print(info)
+
+
+if __name__ == "__main__":
+    main()
