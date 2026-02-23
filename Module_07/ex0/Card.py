@@ -15,4 +15,5 @@ class Card(ABC):
         info = {"name": self.name, "cost": self.cost, "rarity": self.rarity}
         return info
 
-    # def is_playable(self, available_mana: int) -> bool:
+    def is_playable(self, available_mana: int) -> bool:
+        pass
