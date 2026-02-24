@@ -75,7 +75,7 @@ class TransactionStream(DataStream):
     def __init__(self, stream_id: str) -> None:
         super().__init__(stream_id)
 
-    def process_batch(self, data_batch) -> str:
+    def process_batch(self, data_batch: List[Any]) -> str:
         if not isinstance(data_batch, list):
             return "ERROR: Invalid input data"
 
@@ -138,7 +138,7 @@ class EventStream(DataStream):
     def __init__(self, stream_id: str) -> None:
         super().__init__(stream_id)
 
-    def process_batch(self, data_batch) -> str:
+    def process_batch(self, data_batch: List[Any]) -> str:
         if not isinstance(data_batch, list):
             return "ERROR: Invalid input data"
 

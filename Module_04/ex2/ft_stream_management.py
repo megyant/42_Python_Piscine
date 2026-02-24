@@ -1,7 +1,7 @@
 import sys
 
 
-def stream_management():
+def stream_management() -> None:
     sys.stdout.write("Input Stream active. Enter archivist ID: ")
     sys.stdout.flush()
     id = sys.stdin.readline().strip()  # strip filters \t and \n

@@ -1,4 +1,4 @@
-def archive_creation():
+def archive_creation() -> None:
     try:
         print("=== CYBER ARCHIVES - PRESERVATION SYSTEM ===\n")
 

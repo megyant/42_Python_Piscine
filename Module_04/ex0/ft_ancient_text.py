@@ -1,4 +1,4 @@
-def recover_ancient_text():
+def recover_ancient_text() -> None:
     try:
         print("=== CYBER ARCHIVES - DATA RECOVERY SYSTEM ===\n")
         filename = "ancient_fragment.txt"

@@ -41,7 +41,7 @@ class NumericProcessor(DataProcessor):
                                       f"sum={sum_list}, "
                                       f"avg={avg_list:.1f}")
 
-    def format_output(self, result) -> str:
+    def format_output(self, result: str) -> str:
         return super().format_output(result)
 
 
@@ -58,7 +58,7 @@ class TextProcessor(DataProcessor):
                                   f"{len_chars} characters, "
                                   f"{len_words} words")
 
-    def format_output(self, result):
+    def format_output(self, result: str):
         return super().format_output(result)
 
 
@@ -80,7 +80,7 @@ class LogProcessor(DataProcessor):
             return self.format_output("[ALERT] INFO level dected: "
                                       "System ready")
 
-    def format_output(self, result) -> str:
+    def format_output(self, result: str) -> str:
         return super().format_output(result)
 
 

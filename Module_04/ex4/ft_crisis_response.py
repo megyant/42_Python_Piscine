@@ -1,4 +1,4 @@
-def crisis_response():
+def crisis_response() -> None:
     print("=== CYBER ARCHIVES - CRISIS RESPONSE SYSTEM ===\n")
 
     lost = "lost_archive.txt"

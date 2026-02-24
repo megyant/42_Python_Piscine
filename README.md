@@ -8,10 +8,15 @@ This repository consists of a series of intensive projects designed to introduce
 | :--- | :---: | :---: | :--- |
 | **Module 00** | ✅ | 100/100 | Fundamentals & Standard I/O |
 | **Module 01** | ✅ | 100/100 | Object-Oriented Programming |
-| **Module 02** | ❌ | -- | Error Handling & Exceptions |
-| **Module 03** | ❌ | -- | System Interaction & Data Structures |
-| **Module 04** | ❌ | -- | File I/O & Streams |
-| **Module 05** | ❌ | -- | Stream Processing |
+| **Module 02** | ✅ | 100/100 | Error Handling & Exceptions |
+| **Module 03** | ✅ | 100/100 | System Interaction & Data Structures |
+| **Module 04** | ✅ | 100/100 | File I/O & Streams |
+| **Module 05** | ✅ | 100/100 | Stream Processing |
+| **Module 06** | ❌ | --      | Import system |
+| **Module 07** | ❌ | --      | WIP |
+| **Module 08** | ❌ | --      | WIP |
+| **Module 09** | ❌ | --      | WIP |
+| **Module 10** | ❌ | --      | WIP |
 
 ## Module 00: Fundamentals
 7 Exercises - Focuses on the core syntax and essential building blocks of the language:  
@@ -49,6 +54,7 @@ This repository consists of a series of intensive projects designed to introduce
 * *Different import methods*: Covers different methods for importing packages, functions and files
 * *Circular dependency Curse*: Understanding and avoiding circular imports
 
+## Module 07 - WIP
 
 ## Repository Structure
 
@@ -96,7 +102,28 @@ This repository consists of a series of intensive projects designed to introduce
 │   ├── ex2/ ft_stream_management.py
 │   ├── ex3/ ft_vault_security.py
 │   └── ex4/ ft_crisis_response.py
-└── Module_05/
-    ├── main.py
-    ├── ex0/ stream_processor.py
-    └── ex1/ data_stream.py
+├── Module_05/
+│   ├── main.py
+│   ├── ex0/ stream_processor.py
+│   └── ex1/ data_stream.py
+├── Module_06/
+│   └── alchemy/
+│       ├── __init__.py
+│       ├── elements.py
+│       ├── potions.py
+│       ├── grimoire/
+│       │   ├── __init__.py
+│       │   ├── spellbook.py
+│       │   └── validator.py
+│       └── transmutation/
+│           ├── __init__.py
+│           ├── basic.py
+│           └── advanced.py
+├── Module_07/
+│   └── WIP
+├── Module_08/
+│   └── WIP
+├── Module_09/
+│   └── WIP
+└── Module_10/
+    └── WIP
