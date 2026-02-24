@@ -9,7 +9,7 @@ class CreatureCard(Card):
         self.health = health
         self.type = "Creature"
 
-    def get_card_info(self):
+    def get_card_info(self) -> dict:
         info = {"name": self.name, "cost": self.cost, "rarity": self.rarity,
                 "type": self.type, "attack": self.attack,
                 "health": self.health}

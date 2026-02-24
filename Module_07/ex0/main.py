@@ -2,7 +2,7 @@
 from .CreatureCard import CreatureCard
 
 
-def main():
+def main() -> None:
     print("=== DataDeck Card Foundation ===")
 
     print("\nTesting Abstract Base Class Design:")
