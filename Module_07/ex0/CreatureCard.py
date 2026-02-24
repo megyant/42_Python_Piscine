@@ -16,7 +16,16 @@ class CreatureCard(Card):
         return info
 
     def play(self, game_state: dict) -> dict:
-        pass
+        play = {"card_played": self.name, "mana used": self.cost} | game_state
+        return play
 
     def attack_target(self, target: str) -> dict:
-        pass
+        target_health = 5
+
+        if self.attack > target_health:
+            combat = True
+        else:
+            combat = False
+
+        return {"attacker": self.name, "target": target,
+                "damage_dealt": self.attack, "combat_resolved": combat}
