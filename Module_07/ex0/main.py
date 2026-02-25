@@ -19,11 +19,10 @@ def main() -> None:
     is_playable = fire_dragon.is_playable(mana)
     print(f"Playable: {is_playable}")
 
+    game_state = {"is_playable": is_playable}
     if is_playable:
-        effect = "Creature summoned to battlefield"
-        play = {"effect": effect}
         print('Play result: '
-              f'{fire_dragon.play(play)}')
+              f'{fire_dragon.play(game_state)}')
 
         target = "Goblin Warrior"
         print(f"\n{fire_dragon.name} attacks {target}:")
@@ -35,11 +34,10 @@ def main() -> None:
     is_playable = fire_dragon.is_playable(mana)
     print(f"Playable: {is_playable}")
 
+    game_state = {"is_playable": is_playable}
     if is_playable:
-        effect = "Creature summoned to battlefield"
-        play = {"effect": effect}
         print('Play result: '
-              f'{fire_dragon.play(play)}')
+              f'{fire_dragon.play(game_state)}')
 
         target = "Goblin Warrior"
         print(f"\n{fire_dragon.name} attacks {target}:")

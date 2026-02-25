@@ -16,8 +16,10 @@ class CreatureCard(Card):
         return info
 
     def play(self, game_state: dict) -> dict:
-        play = {"card_played": self.name, "mana used": self.cost} | game_state
-        return play
+        if (self.is_playable(game_state.get("is_playable")) is True):
+            play = {"card_played": self.name, "mana used": self.cost,
+                    "effect": "Creature summoned to battlefield"}
+            return play
 
     def attack_target(self, target: str) -> dict:
         target_health = 5

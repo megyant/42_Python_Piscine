@@ -16,6 +16,9 @@ class Card(ABC):
         return info
 
     def is_playable(self, available_mana: int) -> bool:
-        if self.cost < available_mana:
-            return True
-        return False
+        try:
+            if self.cost < available_mana:
+                return True
+            return False
+        except ValueError:
+            print("Error: available mana must be an integer")
