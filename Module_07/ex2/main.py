@@ -26,7 +26,7 @@ def main() -> None:
 
     print("\nPlaying Arcane Warrior (Elite Card):")
 
-    arcane_warrior = EliteCard("Arcane Warrior", 5, "Legendary")
+    arcane_warrior = EliteCard("Arcane Warrior", 5, "Legendary", 8, 8, 4, 7)
 
     print("\nCombat phase:")
 
