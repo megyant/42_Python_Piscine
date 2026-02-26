@@ -18,7 +18,7 @@ def main() -> None:
     for type in spell, creature, artifact:
         deck.add_card(type)
 
-    print(deck.get_deck_stats())
+    print(f"Deck stats: {deck.get_deck_stats()}")
 
     print("\nDrawing and playing cards:\n")
 
@@ -38,9 +38,10 @@ def main() -> None:
             print("Error: Could not find type of card")
 
         is_playable = draw_card.is_playable(mana)
-        game_state = {"is_playable": is_playable}
         if is_playable:
-            print(f"Play result: {draw_card.play(game_state)}")
+            print(f"Play result: {draw_card.play({})}\n")
+
+    print("Polymorphism in action: Same interface, different card behaviors!")
 
 
 if __name__ == "__main__":

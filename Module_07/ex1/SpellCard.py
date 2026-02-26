@@ -8,10 +8,9 @@ class SpellCard(Card):
         self.effect_type = effect_type
 
     def play(self, game_state: dict) -> dict:
-        if (self.is_playable(game_state.get("is_playable")) is True):
-            play = {"card_played": self.name, "mana used": self.cost,
-                    "effect": "Permanent: +1 mana per turn"}
-            return play
+        game_state = {"card_played": self.name, "mana_used": self.cost,
+                      "effect": "Deal 3 damage to target"}
+        return game_state
 
     def resolve_effect(self, targets: list) -> dict:
         pass
