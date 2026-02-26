@@ -34,10 +34,9 @@ def main() -> None:
     is_playable = fire_dragon.is_playable(mana)
     print(f"Playable: {is_playable}")
 
-    game_state = {"is_playable": mana}
     if is_playable:
         print('Play result: '
-              f'{fire_dragon.play(game_state)}')
+              f'{fire_dragon.play({})}')
 
         target = "Goblin Warrior"
         print(f"\n{fire_dragon.name} attacks {target}:")
