@@ -2,8 +2,6 @@ from abc import ABC, abstractmethod
 
 
 class GameStrategy(ABC):
-    def __init__(self, name: str):
-        self.name = name
 
     @abstractmethod
     def execute_turn(self, hand: list, battlefield: list) -> dict:
@@ -11,7 +9,7 @@ class GameStrategy(ABC):
 
     @abstractmethod
     def get_strategy_name(self) -> str:
-        return self.name
+        return "GameStrategy"
 
     @abstractmethod
     def prioritize_targets(self, available_targets: list) -> list:
