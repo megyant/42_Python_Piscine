@@ -3,7 +3,7 @@ from ex3.GameStrategy import GameStrategy
 
 
 class GameEngine:
-    def __init__(self, hand, battlefield):
+    def __init__(self, hand: list, battlefield: list):
         self.strategy = None
         self.factory = None
         self.turns = 0
