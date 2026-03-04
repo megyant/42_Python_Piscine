@@ -6,8 +6,7 @@ from . Magical import Magical
 class EliteCard(Card, Combatable, Magical):
     def __init__(self, name: str, cost: int, rarity: str,
                  damage: int, defense_damage: int, mana_cost: int,
-                 spell_power: int, **kargs):
-        super().__init__(**kargs)
+                 spell_power: int):
         Card.__init__(self, name, cost, rarity)
         Combatable.__init__(self, damage, defense_damage)
         Magical.__init__(self, mana_cost, spell_power)
