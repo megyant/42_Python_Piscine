@@ -32,7 +32,7 @@ def main() -> None:
     print("Turn execution:")
     print(f"Strategy: {game_engine.strategy.get_strategy_name()}")
     print("Actions: "
-          f"{game_engine.strategy.execute_turn(hand_played, battlefield)}")
+          f"{game_engine.simulate_turn()}")
 
     print(f"\nGame Report: {game_engine.get_engine_status()}")
 
