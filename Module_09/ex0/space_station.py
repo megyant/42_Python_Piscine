@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, ValidationError
 from typing import Optional
 from datetime import datetime
 
@@ -19,6 +19,55 @@ def main() -> None:
           "========================================")
 
     print("Valid station created:")
+
+    try:
+        iss_valid = SpaceStation(
+                    station_id="LGW125",
+                    name="Titan Mining Outpost",
+                    crew_size=6,
+                    power_level=6.4,
+                    oxygen_level=95.5,
+                    last_maintenance="2023-07-11T00:00:00",
+                    is_operational=True,
+                    notes=None
+        )
+        print(f"ID: {iss_valid.station_id}")
+        print(f"Name: {iss_valid.name}")
+        print(f"Crew: {iss_valid.crew_size} people")
+        print(f"Power: {iss_valid.power_level}%")
+        print(f"Power: {iss_valid.oxygen_level}%")
+        print("Status: "
+              f"{'Operational' if iss_valid.is_operational else 'Inactive'}")
+    except ValidationError as e:
+        error_detail = e.errors()[0].get('msg')
+        print(error_detail)
+
+    print("\n========================================")
+    print("Expected validation error:")
+
+    try:
+        iss_invalid = SpaceStation(
+                station_id="LGW125",
+                name="Titan Mining Outpost",
+                crew_size=21,
+                power_level=6.4,
+                oxygen_level=95.5,
+                last_maintenance="2023-07-11T00:00:00",
+                is_operational=True,
+                notes=None
+        )
+
+        print(f"ID: {iss_invalid.station_id}")
+        print(f"Name: {iss_invalid.name}")
+        print(f"Crew: {iss_invalid.crew_size} people")
+        print(f"Power: {iss_invalid.power_level}%")
+        print(f"Power: {iss_invalid.oxygen_level}%")
+        print("Status: "
+              f"{'Operational' if iss_invalid.is_operational else 'Inactive'}")
+
+    except ValidationError as e:
+        error_detail = e.errors()[0].get('msg')
+        print(error_detail)
 
 
 if __name__ == "__main__":
