@@ -35,7 +35,7 @@ def main() -> None:
         print(f"Name: {iss_valid.name}")
         print(f"Crew: {iss_valid.crew_size} people")
         print(f"Power: {iss_valid.power_level}%")
-        print(f"Power: {iss_valid.oxygen_level}%")
+        print(f"Oxygen: {iss_valid.oxygen_level}%")
         print("Status: "
               f"{'Operational' if iss_valid.is_operational else 'Inactive'}")
     except ValidationError as e:
