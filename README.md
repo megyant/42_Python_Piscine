@@ -12,10 +12,10 @@ This repository consists of a series of intensive projects designed to introduce
 | **Module 03** | ✅ | 100/100 | System Interaction & Data Structures |
 | **Module 04** | ✅ | 100/100 | File I/O & Streams |
 | **Module 05** | ✅ | 100/100 | Stream Processing |
-| **Module 06** | ❌ | --      | Import system |
-| **Module 07** | ❌ | --      | WIP |
-| **Module 08** | ❌ | --      | WIP |
-| **Module 09** | ❌ | --      | WIP |
+| **Module 06** | ✅ | 100/100 | Import system |
+| **Module 07** | ✅ | 100/100 | Polymorphism |
+| **Module 08** | ✅ | 100/100 | Virtual Environments |
+| **Module 09** | ✅ | 100/100 | Pydantic |
 | **Module 10** | ❌ | --      | WIP |
 
 ## Module 00: Fundamentals
