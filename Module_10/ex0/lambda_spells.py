@@ -11,11 +11,17 @@ def power_filter(mages: list[dict], min_power: int) -> list[dict]:
 
 
 def spell_transformer(spells: list[str]) -> list[str]:
-    pass
+    transformed_spells = list(map(lambda spell: '* ' + spell + ' *', spells))
+    return transformed_spells
 
 
 def mage_stats(mages: list[dict]) -> dict:
-    pass
+    max_power: int = max(mages, key=lambda x: x['power'])
+    min_power: int = min(mages, key=lambda x: x['power'])
+    avg_power: float = sum(map(lambda x: x.get('power'), mages)) / len(mages)
+
+    return {'max_power': max_power, 'min_power': min_power,
+            'avg_power': avg_power}
 
 
 def main() -> None:
@@ -36,7 +42,9 @@ def main() -> None:
     print("\nTesting power filter...")
 
     mages = ([{'name': 'Christopher', 'power': 9, 'element': 'fire'},
-             {'name': 'Olaf', 'power': 11, 'type': 'ice'}])
+             {'name': 'Olaf', 'power': 11, 'element': 'water'},
+             {'name': 'Elsa', 'power': 10, 'element': 'ice'},
+             {'name': 'Anna', 'power': 7, 'element': 'eletric'}])
     min_power = 10
 
     filtered_mages = power_filter(mages, min_power)
@@ -49,6 +57,25 @@ def main() -> None:
         print(f"Only {mages_left} has enough power")
     else:
         print(f"{mages_left} have enough power")
+
+    print("\nTesting spell transformer...")
+
+    spells = ['wingardium leviosa', 'expeliarmus', 'diffindo']
+
+    transformed_spells = spell_transformer(spells)
+    formatted_spells = " ".join(transformed_spells)
+
+    print(formatted_spells)
+
+    print("\nTesting mage stats...")
+
+    stats_mages = mage_stats(mages)
+
+    print(f"Max power: {stats_mages.get('max_power').get('power')} "
+          f"({stats_mages.get('max_power').get('name')})")
+    print(f"Min power: {stats_mages.get('min_power').get('power')} "
+          f"({stats_mages.get('min_power').get('name')})")
+    print(f"Average: {stats_mages.get('avg_power')}")
 
 
 if __name__ == "__main__":
