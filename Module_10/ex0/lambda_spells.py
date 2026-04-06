@@ -21,7 +21,7 @@ def mage_stats(mages: list[dict]) -> dict:
     avg_power: float = sum(map(lambda x: x.get('power'), mages)) / len(mages)
 
     return {'max_power': max_power, 'min_power': min_power,
-            'avg_power': avg_power}
+            'avg_power': round(avg_power, 2)}
 
 
 def main() -> None:

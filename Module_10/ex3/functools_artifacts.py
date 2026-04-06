@@ -1,8 +1,12 @@
 import functools
 import operator
+from collections.abc import Callable
 
 
 def spell_reducer(spells: list[int], operation: str) -> int:
+    if not spells:
+        return 0
+
     operations = {
         "add": operator.add,
         "multiply": operator.mul,
@@ -16,7 +20,7 @@ def spell_reducer(spells: list[int], operation: str) -> int:
     return functools.reduce(operations[operation], spells)
 
 
-def partial_enchanter(base_enchantment: callable) -> dict[str, callable]:
+def partial_enchanter(base_enchantment: Callable) -> dict[str, Callable]:
     return {
         "fire_enchant": functools.partial(base_enchantment, power=50,
                                           element="Fire"),
@@ -34,7 +38,7 @@ def memoized_fibonacci(n: int) -> int:
     return memoized_fibonacci(n - 1) + memoized_fibonacci(n - 2)
 
 
-def spell_dispatcher() -> callable:
+def spell_dispatcher() -> Callable:
     @functools.singledispatch
     def cast_spell(spell_data):
         return f"Oops not a known type: {spell_data}"

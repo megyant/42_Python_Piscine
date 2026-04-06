@@ -1,7 +1,8 @@
 from typing import Tuple
+from collections.abc import Callable
 
 
-def spell_combiner(spell1: callable, spell2: callable) -> callable:
+def spell_combiner(spell1: Callable, spell2: Callable) -> Callable:
     def combined_spell(*args, **kwargs) -> Tuple[str, str]:
         result1 = spell1(*args, **kwargs)
         result2 = spell2(*args, **kwargs)
@@ -9,14 +10,14 @@ def spell_combiner(spell1: callable, spell2: callable) -> callable:
     return combined_spell
 
 
-def power_amplifier(base_spell: callable, multiplier: int) -> callable:
+def power_amplifier(base_spell: Callable, multiplier: int) -> Callable:
     def accumulated_power(*args, **kwargs) -> int:
         original_value = base_spell(*args, **kwargs)
         return original_value * multiplier
     return accumulated_power
 
 
-def conditional_caster(condition: callable, spell: callable) -> callable:
+def conditional_caster(condition: Callable, spell: Callable) -> Callable:
     def check_condition(*args, **kwargs) -> str:
         if condition(*args, **kwargs) is True:
             return spell(*args, **kwargs)
@@ -25,7 +26,7 @@ def conditional_caster(condition: callable, spell: callable) -> callable:
     return check_condition
 
 
-def spell_sequence(spells: list[callable]) -> callable:
+def spell_sequence(spells: list[Callable]) -> Callable:
     def sequence(*args, **kwargs) -> list[str]:
         all_results = []
         for spell in spells:

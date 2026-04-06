@@ -1,7 +1,8 @@
 from typing import Any
+from collections.abc import Callable
 
 
-def mage_counter() -> callable:
+def mage_counter() -> Callable:
     count = 0
 
     def increment() -> int:
@@ -12,23 +13,23 @@ def mage_counter() -> callable:
     return increment
 
 
-def spell_accumulator(initial_power: int) -> callable:
+def spell_accumulator(initial_power: int) -> Callable:
 
-    def increment() -> int:
+    def increment(amount: int) -> int:
         nonlocal initial_power
-        initial_power += 5
+        initial_power += amount
         return initial_power
 
     return increment
 
 
-def enchantment_factory(enchantment_type: str) -> callable:
+def enchantment_factory(enchantment_type: str) -> Callable:
     def apply_enchantment(item_name: str) -> str:
         return f"{enchantment_type} {item_name}"
     return apply_enchantment
 
 
-def memory_vault() -> dict[str, callable]:
+def memory_vault() -> dict[str, Callable]:
     dict_vault = {}
 
     def store(key: str, value: Any):
@@ -51,7 +52,7 @@ def main() -> None:
     print("\nTesting spell accumulator...")
     initial_power = 0
     power = spell_accumulator(initial_power)
-    print(f"Incrementing from {power()} to {power()} in power")
+    print(f"Incrementing from {power(0)} to {power(5)} in power")
 
     print("\nTesting enchantment factory...")
     flaming = enchantment_factory("Flaming")
