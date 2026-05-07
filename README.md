@@ -16,7 +16,7 @@ This repository consists of a series of intensive projects designed to introduce
 | **Module 07** | ✅ | 100/100 | Polymorphism |
 | **Module 08** | ✅ | 100/100 | Virtual Environments |
 | **Module 09** | ✅ | 100/100 | Pydantic |
-| **Module 10** | ❌ | --      | WIP |
+| **Module 10** | ✅ | 100/100 | Lambda Sort and Kwargs |
 
 ## Module 00: Fundamentals
 7 Exercises - Focuses on the core syntax and essential building blocks of the language:  
@@ -54,7 +54,17 @@ This repository consists of a series of intensive projects designed to introduce
 * *Different import methods*: Covers different methods for importing packages, functions and files
 * *Circular dependency Curse*: Understanding and avoiding circular imports
 
-## Module 07 - WIP
+## Module 07 - Polymorphism
+Several exercises on how to use __init__.py and how to interact with different files to create a single program
+
+## Module 08 - Virtual Environments
+Learn how to work with virtual environments and configuration files in json format
+
+## Module 09 - Pydantic
+Use pydantic for file parsing
+
+## Module 10 - Lambda Sort and Kwargs
+Learn how to use lambda to sort data structures and kwargs for an uncertain amout of parameters inputed
 
 ## Repository Structure
 
@@ -70,60 +80,13 @@ This repository consists of a series of intensive projects designed to introduce
 │   ├── ex5/ ft_count_harvest_iterative.py, ft_count_harvest_recursive.py
 │   ├── ex6/ ft_garden_summary.py
 │   └── ex7/ ft_seed_inventory.py
-
 ├── Module_01/
-│   ├── ex0/ ft_garden_intro.py
-│   ├── ex1/ ft_garden_data.py
-│   ├── ex2/ ft_plant_growth.py
-│   ├── ex3/ ft_plant_factory.py
-│   ├── ex4/ ft_garden_security.py
-│   ├── ex5/ ft_plant_types.py
-│   └── ex6/ ft_garden_analytics.py
 ├── Module_02/
-│   ├── ex0/ ft_first_exception.py
-│   ├── ex1/ ft_different_errors.py
-│   ├── ex2/ ft_custom_errors.py
-│   ├── ex3/ ft_finally_block.py
-│   ├── ex4/ ft_raise_errors.py
-│   └── ex5/ ft_garden_management.py
 ├── Module_03/
-│   ├── data_quest_tools/
-│   ├── ex0/ ft_command_quest.py
-│   ├── ex1/ ft_score_analytics.py
-│   ├── ex2/ ft_coordinate_system.py
-│   ├── ex3/ ft_achievement_tracker.py
-│   ├── ex4/ ft_inventory_system.py
-│   ├── ex5/ ft_data_stream.py
-│   └── ex6/ ft_analytics_dashboard.py
 ├── Module_04/
-│   ├── data-generator-tools/
-│   ├── ex0/ ft_ancient_text.py
-│   ├── ex1/ ft_archive_creation.py
-│   ├── ex2/ ft_stream_management.py
-│   ├── ex3/ ft_vault_security.py
-│   └── ex4/ ft_crisis_response.py
 ├── Module_05/
-│   ├── main.py
-│   ├── ex0/ stream_processor.py
-│   └── ex1/ data_stream.py
 ├── Module_06/
-│   └── alchemy/
-│       ├── __init__.py
-│       ├── elements.py
-│       ├── potions.py
-│       ├── grimoire/
-│       │   ├── __init__.py
-│       │   ├── spellbook.py
-│       │   └── validator.py
-│       └── transmutation/
-│           ├── __init__.py
-│           ├── basic.py
-│           └── advanced.py
 ├── Module_07/
-│   └── WIP
 ├── Module_08/
-│   └── WIP
 ├── Module_09/
-│   └── WIP
 └── Module_10/
-    └── WIP
